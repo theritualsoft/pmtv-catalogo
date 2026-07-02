@@ -1,11 +1,30 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { parseDuration, toContentItem } from './sync-youtube.mjs';
+import { parseDuration, toContentItem, ytDlpEntryToContentItem } from './sync-youtube.mjs';
 
 test('convierte duraciones ISO 8601 a segundos', () => {
   assert.equal(parseDuration('PT1H2M3S'), 3723);
   assert.equal(parseDuration('PT15M33S'), 933);
   assert.equal(parseDuration('invalida'), null);
+});
+
+test('normaliza metadata plana obtenida por yt-dlp', () => {
+  const item = ytDlpEntryToContentItem({
+    id: 'abc123',
+    title: 'Capitulo nuevo',
+    timestamp: 1782864000,
+    duration: 125.4,
+    thumbnail: 'https://example.com/thumb.jpg'
+  }, {
+    id: 'programa',
+    title: 'Programa PMTV',
+    playlist_id: 'playlist',
+    presentation: 'landscape'
+  });
+  assert.equal(item.id, 'PMTV-YT-abc123');
+  assert.equal(item.duration_seconds, 125);
+  assert.equal(item.premium, false);
+  assert.equal(item.program_id, 'programa');
 });
 
 test('normaliza un video de YouTube al schema PMTV', () => {

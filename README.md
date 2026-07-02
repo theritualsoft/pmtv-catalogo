@@ -17,11 +17,9 @@ https://raw.githubusercontent.com/theritualsoft/pmtv-catalogo/main/public/catalo
 
 ## Configuracion inicial
 
-1. Activar YouTube Data API v3 en Google Cloud.
-2. Crear una API key restringida solamente a YouTube Data API v3.
-3. En GitHub abrir **Settings > Secrets and variables > Actions**.
-4. Crear el secret `YOUTUBE_API_KEY`.
-5. Ejecutar manualmente el workflow una vez.
+No requiere credenciales: GitHub Actions instala `yt-dlp` y lee las playlists
+publicas. Opcionalmente se puede crear el secret `YOUTUBE_API_KEY` para usar la
+API oficial de YouTube en lugar del extractor.
 
 Nunca guardar la API key dentro de archivos, commits, Flutter o el APK.
 
