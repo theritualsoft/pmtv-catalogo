@@ -1,0 +1,46 @@
+name: Sincronizar catalogo PMTV
+
+on:
+  schedule:
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-youtube-catalog
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Ejecutar pruebas
+        run: node --test scripts/sync-youtube.test.mjs
+
+      - name: Sincronizar YouTube
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node scripts/sync-youtube.mjs
+
+      - name: Publicar cambios
+        run: |
+          if git diff --quiet -- public/catalog.json public/status.json; then
+            echo "El catalogo no cambio."
+            exit 0
+          fi
+          git config user.name "PMTV Catalog Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/catalog.json public/status.json
+          git commit -m "Actualiza catalogo de YouTube"
+          git push

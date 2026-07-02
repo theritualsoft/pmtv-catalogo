@@ -1,0 +1,53 @@
+{
+  "programs": [
+    {
+      "id": "con-canas-y-sin-ganas",
+      "title": "Con Canas y Sin Ganas",
+      "playlist_id": "PLwnLiY7Va0AoYJ4Q9rVAlOdXCLt4aMlOc",
+      "active": true,
+      "presentation": "landscape"
+    },
+    {
+      "id": "grueso-calibre-politico",
+      "title": "Grueso Calibre Politico",
+      "playlist_id": "PLwnLiY7Va0Ao3ShPHM4kIAgKuIlk1BJMy",
+      "active": true,
+      "presentation": "landscape"
+    },
+    {
+      "id": "demente-criminal",
+      "title": "Demente Criminal",
+      "playlist_id": "PLwnLiY7Va0ApX11vIxUYuiOkrAQn6o5Sy",
+      "active": true,
+      "presentation": "landscape"
+    },
+    {
+      "id": "frente-a-frente-2025",
+      "title": "Frente a Frente 2025",
+      "playlist_id": "PLwnLiY7Va0ArAnpVzHyRkfkqck9BFJvAH",
+      "active": false,
+      "presentation": "landscape"
+    },
+    {
+      "id": "jorge-en-la-ruta",
+      "title": "Jorge en la Ruta",
+      "playlist_id": "PLwnLiY7Va0AoqBLhyrPd-KgIrGxGANldm",
+      "active": true,
+      "presentation": "landscape"
+    },
+    {
+      "id": "frente-a-frente-2026-luzmatv",
+      "title": "Lo mejor de Frente a Frente 2026",
+      "playlist_id": "PLDDlfz7cDBMk",
+      "active": true,
+      "presentation": "landscape"
+    },
+    {
+      "id": "shorts-pmtv",
+      "title": "PMTV Shorts",
+      "playlist_id": "",
+      "active": true,
+      "presentation": "short"
+    }
+  ]
+}
