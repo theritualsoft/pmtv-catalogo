@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T21:14:05.287Z",
+  "generated_at": "2026-07-04T23:13:56.663Z",
   "items": [
     {
       "id": "PMTV-YT-nmA7yiiuw44",
@@ -3108,6 +3108,78 @@
       "published_at": null,
       "year": null,
       "duration_seconds": 57,
+      "premium": false,
+      "featured": false,
+      "requires_auth": false,
+      "access_level": "public",
+      "program_id": "grueso-calibre-politico",
+      "playlist_id": "PLwnLiY7Va0Ao3ShPHM4kIAgKuIlk1BJMy",
+      "presentation": "landscape",
+      "tags": [
+        "Grueso Calibre Politico",
+        "PMTV"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "PMTV-YT-eht3UbYqLnA",
+      "title": "Patricia Maldonado comments on the statements of Mrs. Camila Vallejos.",
+      "description": "",
+      "content_type": "video",
+      "source": "youtube",
+      "url": "https://youtu.be/eht3UbYqLnA",
+      "thumbnail_url": "https://i.ytimg.com/vi/eht3UbYqLnA/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIFIoQjAP&rs=AOn4CLD1YM3W4mWVmwwSG4pNRypegupNZQ",
+      "published_at": null,
+      "year": null,
+      "duration_seconds": 347,
+      "premium": false,
+      "featured": false,
+      "requires_auth": false,
+      "access_level": "public",
+      "program_id": "grueso-calibre-politico",
+      "playlist_id": "PLwnLiY7Va0Ao3ShPHM4kIAgKuIlk1BJMy",
+      "presentation": "landscape",
+      "tags": [
+        "Grueso Calibre Politico",
+        "PMTV"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "PMTV-YT-IFttytuhBTs",
+      "title": "Fuerza amiga María Luisa Cordero, porque lo es yo , prefiero ir a la cárcel antes de pedir disculpas",
+      "description": "",
+      "content_type": "video",
+      "source": "youtube",
+      "url": "https://youtu.be/IFttytuhBTs",
+      "thumbnail_url": "https://i.ytimg.com/vi/IFttytuhBTs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCt5F_uGPyxxrEJZ9zUs4dkIs2qcw",
+      "published_at": null,
+      "year": null,
+      "duration_seconds": 82,
+      "premium": false,
+      "featured": false,
+      "requires_auth": false,
+      "access_level": "public",
+      "program_id": "grueso-calibre-politico",
+      "playlist_id": "PLwnLiY7Va0Ao3ShPHM4kIAgKuIlk1BJMy",
+      "presentation": "landscape",
+      "tags": [
+        "Grueso Calibre Politico",
+        "PMTV"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "PMTV-YT-OD9O4hYIUGA",
+      "title": "HASTA CUANDO NOS AGARRAN PARA EL WEBEO / #PATRICIAMALDONADOTV",
+      "description": "",
+      "content_type": "video",
+      "source": "youtube",
+      "url": "https://youtu.be/OD9O4hYIUGA",
+      "thumbnail_url": "https://i.ytimg.com/vi/OD9O4hYIUGA/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIEQoKDAP&rs=AOn4CLAm6nJDWYwrt6A9su9cyiZaR1Fpqw",
+      "published_at": null,
+      "year": null,
+      "duration_seconds": 173,
       "premium": false,
       "featured": false,
       "requires_auth": false,
