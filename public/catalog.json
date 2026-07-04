@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T23:18:33.640Z",
+  "generated_at": "2026-07-04T04:02:28.162Z",
   "items": [
     {
       "id": "PMTV-YT-nmA7yiiuw44",
@@ -707,7 +707,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/TeykrcXsdWs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSrzWmG8zUq5REZLpDrbogeoIJLg",
       "published_at": null,
       "year": null,
-      "duration_seconds": null,
+      "duration_seconds": 4842,
       "premium": false,
       "featured": false,
       "requires_auth": false,
