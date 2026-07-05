@@ -3,6 +3,8 @@
 Catalogo publico y automatico de los videos gratuitos de PMTV publicados en
 YouTube. Google Drive y cualquier URL premium quedan fuera de este repositorio.
 
+Política de privacidad: `https://theritualsoft.github.io/pmtv-catalogo/privacy.html`.
+
 ## Sincronizacion
 
 GitHub Actions ejecuta `scripts/sync-youtube.mjs` cada dos horas y tambien
