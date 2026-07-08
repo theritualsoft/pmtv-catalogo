@@ -1,6 +1,15 @@
 {
-  "started_at": "2026-07-08T06:39:03.320Z",
-  "completed_at": "2026-07-08T06:39:08.947Z",
-  "item_count": 208,
-  "errors": []
+  "started_at": "2026-07-08T10:30:55.063Z",
+  "completed_at": "2026-07-08T10:31:27.722Z",
+  "item_count": 75,
+  "errors": [
+    {
+      "program_id": "con-canas-y-sin-ganas",
+      "message": "Command failed: yt-dlp --flat-playlist --dump-single-json --ignore-errors --no-warnings https://www.youtube.com/playlist?list=PLwnLiY7Va0AoYJ4Q9rVAlOdXCLt4aMlOc\nERROR: PLwnLiY7Va0AoYJ4Q9rVAlOdXCLt4aMlOc page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)\n"
+    },
+    {
+      "program_id": "grueso-calibre-politico",
+      "message": "Command failed: yt-dlp --flat-playlist --dump-single-json --ignore-errors --no-warnings https://www.youtube.com/playlist?list=PLwnLiY7Va0Ao3ShPHM4kIAgKuIlk1BJMy\nERROR: PLwnLiY7Va0Ao3ShPHM4kIAgKuIlk1BJMy page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)\n"
+    }
+  ]
 }
