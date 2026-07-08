@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T14:41:06.830Z",
+  "generated_at": "2026-07-08T17:51:55.984Z",
   "items": [
     {
       "id": "PMTV-YT-nmA7yiiuw44",
@@ -4716,78 +4716,6 @@
       "published_at": null,
       "year": null,
       "duration_seconds": 1399,
-      "premium": false,
-      "featured": false,
-      "requires_auth": false,
-      "access_level": "public",
-      "program_id": "jorge-en-la-ruta",
-      "playlist_id": "PLwnLiY7Va0AoqBLhyrPd-KgIrGxGANldm",
-      "presentation": "landscape",
-      "tags": [
-        "Jorge en la Ruta",
-        "PMTV"
-      ],
-      "status": "published"
-    },
-    {
-      "id": "PMTV-YT-d2tLZ-qQr08",
-      "title": "I had a 1968 Dodge Charger… and this was the story | Jorge on Route 2",
-      "description": "",
-      "content_type": "video",
-      "source": "youtube",
-      "url": "https://youtu.be/d2tLZ-qQr08",
-      "thumbnail_url": "https://i.ytimg.com/vi/d2tLZ-qQr08/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAPfNOMA-cAp75a1PzfHILqzy7zxg",
-      "published_at": null,
-      "year": null,
-      "duration_seconds": 2301,
-      "premium": false,
-      "featured": false,
-      "requires_auth": false,
-      "access_level": "public",
-      "program_id": "jorge-en-la-ruta",
-      "playlist_id": "PLwnLiY7Va0AoqBLhyrPd-KgIrGxGANldm",
-      "presentation": "landscape",
-      "tags": [
-        "Jorge en la Ruta",
-        "PMTV"
-      ],
-      "status": "published"
-    },
-    {
-      "id": "PMTV-YT-dByF3wciZT4",
-      "title": "I thought it was a Ford… but it wasn't | Jorge on Route 3 – Memories from Banff",
-      "description": "",
-      "content_type": "video",
-      "source": "youtube",
-      "url": "https://youtu.be/dByF3wciZT4",
-      "thumbnail_url": "https://i.ytimg.com/vi/dByF3wciZT4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCw_OUZsX5oog_Tv0R7TQAeJQsmsw",
-      "published_at": null,
-      "year": null,
-      "duration_seconds": 2769,
-      "premium": false,
-      "featured": false,
-      "requires_auth": false,
-      "access_level": "public",
-      "program_id": "jorge-en-la-ruta",
-      "playlist_id": "PLwnLiY7Va0AoqBLhyrPd-KgIrGxGANldm",
-      "presentation": "landscape",
-      "tags": [
-        "Jorge en la Ruta",
-        "PMTV"
-      ],
-      "status": "published"
-    },
-    {
-      "id": "PMTV-YT-LAiI1encS2U",
-      "title": "Fui a Iquique... y me la vendieron I | Jorge en la Ruta #4 – Recuerdos",
-      "description": "",
-      "content_type": "video",
-      "source": "youtube",
-      "url": "https://youtu.be/LAiI1encS2U",
-      "thumbnail_url": "https://i.ytimg.com/vi/LAiI1encS2U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqQKJQBcQUjF3RWVBMFnVzzfkzDQ",
-      "published_at": null,
-      "year": null,
-      "duration_seconds": 2697,
       "premium": false,
       "featured": false,
       "requires_auth": false,
