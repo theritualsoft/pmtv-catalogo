@@ -1,4 +1,5 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { pathToFileURL } from 'node:url';
@@ -6,6 +7,19 @@ import { pathToFileURL } from 'node:url';
 const API_ROOT = 'https://www.googleapis.com/youtube/v3';
 const OUTPUT_DIR = new URL('../public/', import.meta.url);
 const execFileAsync = promisify(execFile);
+
+function ytDlpCommand() {
+  const appData = process.env.APPDATA;
+  const candidates = [
+    ['yt-dlp', []],
+    ...(appData
+      ? [[`${appData}\\Python\\Python314\\Scripts\\yt-dlp.exe`, []]]
+      : []),
+    ['py', ['-m', 'yt_dlp']],
+    ['python', ['-m', 'yt_dlp']]
+  ];
+  return candidates;
+}
 
 export function parseDuration(value = '') {
   const match = value.match(/^P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/);
@@ -84,6 +98,10 @@ export function ytDlpEntryToContentItem(entry, program) {
   };
 }
 
+function newestFirst(entries) {
+  return [...entries].reverse();
+}
+
 async function youtube(path, params, apiKey) {
   const url = new URL(`${API_ROOT}/${path}`);
   for (const [key, value] of Object.entries({ ...params, key: apiKey })) {
@@ -153,19 +171,32 @@ export async function buildCatalog(programs, apiKey) {
 export async function buildCatalogWithYtDlp(programs) {
   const items = [];
   const errors = [];
+  const commands = ytDlpCommand();
   for (const program of programs) {
     if (!program.playlist_id) continue;
     try {
       const url = `https://www.youtube.com/playlist?list=${program.playlist_id}`;
-      const { stdout } = await execFileAsync('yt-dlp', [
-        '--flat-playlist',
-        '--dump-single-json',
-        '--ignore-errors',
-        '--no-warnings',
-        url
-      ], { maxBuffer: 50 * 1024 * 1024 });
+      let stdout = '';
+      let lastError;
+      for (const [command, prefixArgs] of commands) {
+        if (command.includes('\\') && !existsSync(command)) continue;
+        try {
+          ({ stdout } = await execFileAsync(command, [
+            ...prefixArgs,
+            '--flat-playlist',
+            '--dump-single-json',
+            '--ignore-errors',
+            '--no-warnings',
+            url
+          ], { maxBuffer: 50 * 1024 * 1024 }));
+          break;
+        } catch (error) {
+          lastError = error;
+        }
+      }
+      if (!stdout) throw lastError ?? new Error('yt-dlp no disponible');
       const playlist = JSON.parse(stdout);
-      const entries = (playlist.entries ?? []).filter((entry) => entry?.id);
+      const entries = newestFirst((playlist.entries ?? []).filter((entry) => entry?.id));
       items.push(...entries.map((entry) => ytDlpEntryToContentItem(entry, program)));
     } catch (error) {
       errors.push({ program_id: program.id, message: String(error.message ?? error) });
