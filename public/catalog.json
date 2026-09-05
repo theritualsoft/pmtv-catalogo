@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:45:56.154Z",
+  "generated_at": "2026-09-05T00:06:52.112Z",
   "items": [
     {
       "id": "PMTV-YT-BWb6ENwnhXI",
@@ -3339,7 +3339,7 @@
     },
     {
       "id": "PMTV-YT-whaHtwq3bmE",
-      "title": "CNTV YouTube",
+      "title": "Video PMTV",
       "description": "",
       "content_type": "video",
       "source": "youtube",
@@ -3347,7 +3347,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/whaHtwq3bmE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8rolRdOGocyltE-zNNLG2loUXaQ",
       "published_at": null,
       "year": null,
-      "duration_seconds": 414,
+      "duration_seconds": null,
       "premium": false,
       "featured": false,
       "requires_auth": false,
