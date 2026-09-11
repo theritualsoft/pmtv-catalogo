@@ -1,6 +1,30 @@
 {
-  "generated_at": "2026-09-10T20:52:40.921Z",
+  "generated_at": "2026-09-11T00:10:50.179Z",
   "items": [
+    {
+      "id": "PMTV-YT-k-YesqYQopg",
+      "title": "Video PMTV",
+      "description": "",
+      "content_type": "video",
+      "source": "youtube",
+      "url": "https://youtu.be/k-YesqYQopg",
+      "thumbnail_url": "https://i.ytimg.com/vi/k-YesqYQopg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBbV00zr5gVCMQvfesgIAMgvI9RXQ",
+      "published_at": null,
+      "year": null,
+      "duration_seconds": null,
+      "premium": false,
+      "featured": true,
+      "requires_auth": false,
+      "access_level": "public",
+      "program_id": "con-canas-y-sin-ganas",
+      "playlist_id": "PLwnLiY7Va0AoYJ4Q9rVAlOdXCLt4aMlOc",
+      "presentation": "landscape",
+      "tags": [
+        "Con Canas y Sin Ganas",
+        "PMTV"
+      ],
+      "status": "published"
+    },
     {
       "id": "PMTV-YT-BWb6ENwnhXI",
       "title": "CCYSG #36 | CNTV, colds, allergies and household habits",
@@ -13,7 +37,7 @@
       "year": null,
       "duration_seconds": 4717,
       "premium": false,
-      "featured": true,
+      "featured": false,
       "requires_auth": false,
       "access_level": "public",
       "program_id": "con-canas-y-sin-ganas",
