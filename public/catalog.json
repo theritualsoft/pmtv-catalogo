@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T04:48:43.240Z",
+  "generated_at": "2026-09-13T11:53:20.195Z",
   "items": [
     {
       "id": "PMTV-YT-k-YesqYQopg",
@@ -885,6 +885,30 @@
       "presentation": "landscape",
       "tags": [
         "Con Canas y Sin Ganas",
+        "PMTV"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "PMTV-YT-whaHtwq3bmE",
+      "title": "Video PMTV",
+      "description": "",
+      "content_type": "video",
+      "source": "youtube",
+      "url": "https://youtu.be/whaHtwq3bmE",
+      "thumbnail_url": "https://i.ytimg.com/vi/whaHtwq3bmE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8rolRdOGocyltE-zNNLG2loUXaQ",
+      "published_at": null,
+      "year": null,
+      "duration_seconds": null,
+      "premium": false,
+      "featured": false,
+      "requires_auth": false,
+      "access_level": "public",
+      "program_id": "grueso-calibre-politico",
+      "playlist_id": "PLwnLiY7Va0Ao3ShPHM4kIAgKuIlk1BJMy",
+      "presentation": "landscape",
+      "tags": [
+        "Grueso Calibre Politico",
         "PMTV"
       ],
       "status": "published"
@@ -3348,30 +3372,6 @@
       "published_at": null,
       "year": null,
       "duration_seconds": 1035,
-      "premium": false,
-      "featured": false,
-      "requires_auth": false,
-      "access_level": "public",
-      "program_id": "grueso-calibre-politico",
-      "playlist_id": "PLwnLiY7Va0Ao3ShPHM4kIAgKuIlk1BJMy",
-      "presentation": "landscape",
-      "tags": [
-        "Grueso Calibre Politico",
-        "PMTV"
-      ],
-      "status": "published"
-    },
-    {
-      "id": "PMTV-YT-whaHtwq3bmE",
-      "title": "Video PMTV",
-      "description": "",
-      "content_type": "video",
-      "source": "youtube",
-      "url": "https://youtu.be/whaHtwq3bmE",
-      "thumbnail_url": "https://i.ytimg.com/vi/whaHtwq3bmE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8rolRdOGocyltE-zNNLG2loUXaQ",
-      "published_at": null,
-      "year": null,
-      "duration_seconds": null,
       "premium": false,
       "featured": false,
       "requires_auth": false,
