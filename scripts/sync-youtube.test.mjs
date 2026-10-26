@@ -8,6 +8,12 @@ test('convierte duraciones ISO 8601 a segundos', () => {
   assert.equal(parseDuration('invalida'), null);
 });
 
+test('prefiere metadatos localizados al idioma solicitado', () => {
+  const item = toContentItem({id:'video', snippet:{title:'English title', description:'English description', localized:{title:'Título en español', description:'Descripción en español'}}}, {id:'programa',title:'PMTV',playlist_id:'lista'});
+  assert.equal(item.title, 'Título en español');
+  assert.equal(item.description, 'Descripción en español');
+});
+
 test('normaliza metadata plana obtenida por yt-dlp', () => {
   const item = ytDlpEntryToContentItem({
     id: 'abc123',

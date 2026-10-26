@@ -34,8 +34,8 @@ export function toContentItem(video, program) {
   const tags = [...new Set([program.title, ...(video.snippet?.tags ?? []), 'PMTV'])];
   return {
     id: `PMTV-YT-${video.id}`,
-    title: video.snippet?.title ?? 'Video PMTV',
-    description: video.snippet?.description ?? '',
+    title: video.snippet?.localized?.title ?? video.snippet?.title ?? 'Video PMTV',
+    description: video.snippet?.localized?.description ?? video.snippet?.description ?? '',
     content_type: 'video',
     source: 'youtube',
     url: `https://youtu.be/${video.id}`,
@@ -138,6 +138,7 @@ async function videoDetails(ids, apiKey) {
   for (let index = 0; index < ids.length; index += 50) {
     const page = await youtube('videos', {
       part: 'snippet,contentDetails,status',
+      hl: 'es',
       id: ids.slice(index, index + 50).join(','),
       maxResults: 50
     }, apiKey);
@@ -184,6 +185,10 @@ export async function buildCatalogWithYtDlp(programs) {
           ({ stdout } = await execFileAsync(command, [
             ...prefixArgs,
             '--flat-playlist',
+            '--extractor-args',
+            'youtube:lang=es',
+            '--add-header',
+            'Accept-Language:es-CL,es;q=0.9',
             '--dump-single-json',
             '--ignore-errors',
             '--no-warnings',
