@@ -1,6 +1,14 @@
 {
   "programs": [
     {
+      "id": "hablemos-de-todo-un-poco",
+      "title": "Hablemos de todo un poco",
+      "description": "Conversación en vivo todos los miércoles.",
+      "playlist_id": "PLN9RyDgKRw3g",
+      "active": true,
+      "presentation": "landscape"
+    },
+    {
       "id": "con-canas-y-sin-ganas",
       "title": "Con Canas y Sin Ganas",
       "playlist_id": "PLwnLiY7Va0AoYJ4Q9rVAlOdXCLt4aMlOc",
