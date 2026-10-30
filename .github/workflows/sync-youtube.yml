@@ -29,7 +29,7 @@ jobs:
         run: node --test scripts/sync-youtube.test.mjs
 
       - name: Instalar extractor de playlists
-        run: python -m pip install --disable-pip-version-check yt-dlp
+        run: python -m pip install --disable-pip-version-check yt-dlp==2026.3.17
 
       - name: Sincronizar YouTube
         env:
