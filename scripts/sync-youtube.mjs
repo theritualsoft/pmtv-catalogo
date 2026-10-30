@@ -230,6 +230,7 @@ export async function main() {
   }
   const rank = item => item.tags.includes('pmtv-live') ? 0 : item.tags.includes('pmtv-upcoming') ? 1 : 2;
   const items = [...byId.values()].sort((a,b) => rank(a)-rank(b) || (rank(a) === 1 ? Date.parse(a.published_at)-Date.parse(b.published_at) : (Date.parse(b.published_at)||0)-(Date.parse(a.published_at)||0)));
+  for (const item of items) if (item.tags.includes('pmtv-upcoming') && item.published_at) item.tags.push('Horario: ' + new Intl.DateTimeFormat('es-CL', {timeZone:'America/Santiago', dateStyle:'full',timeStyle:'short'}).format(new Date(item.published_at)));
   items.forEach((item,index) => {item.featured=index===0;});
   const errors = [...result.errors,...streams.errors];
   await mkdir(OUTPUT_DIR, { recursive: true });
