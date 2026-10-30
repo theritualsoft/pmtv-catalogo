@@ -60,6 +60,7 @@ export function toContentItem(video, program) {
 }
 
 function ytDlpDate(entry) {
+  if (Number.isFinite(entry.release_timestamp)) return new Date(entry.release_timestamp * 1000).toISOString();
   if (Number.isFinite(entry.timestamp)) {
     return new Date(entry.timestamp * 1000).toISOString();
   }
@@ -93,13 +94,13 @@ export function ytDlpEntryToContentItem(entry, program) {
     program_id: program.id,
     playlist_id: program.playlist_id,
     presentation: program.presentation ?? 'landscape',
-    tags: [program.title, 'PMTV'],
+    tags: [program.title, 'PMTV', ...(entry.live_status === 'is_live' ? ['pmtv-live'] : entry.live_status === 'is_upcoming' ? ['pmtv-upcoming'] : [])],
     status: 'published'
   };
 }
 
 function newestFirst(entries) {
-  return [...entries].reverse();
+  return [...entries];
 }
 
 async function youtube(path, params, apiKey) {
@@ -176,7 +177,7 @@ export async function buildCatalogWithYtDlp(programs) {
   for (const program of programs) {
     if (!program.playlist_id) continue;
     try {
-      const url = `https://www.youtube.com/playlist?list=${program.playlist_id}`;
+      const url = program.streams_url ?? `https://www.youtube.com/playlist?list=${program.playlist_id}`;
       let stdout = '';
       let lastError;
       for (const [command, prefixArgs] of commands) {
@@ -184,7 +185,7 @@ export async function buildCatalogWithYtDlp(programs) {
         try {
           ({ stdout } = await execFileAsync(command, [
             ...prefixArgs,
-            '--flat-playlist',
+            ...(program.streams_url ? ['--no-flat-playlist', '--skip-download', '--ignore-no-formats-error', '--playlist-end', '12'] : ['--flat-playlist']),
             '--extractor-args',
             'youtube:lang=es',
             '--add-header',
@@ -218,9 +219,19 @@ export async function main() {
   const config = JSON.parse(await readFile(new URL('../programs.json', import.meta.url), 'utf8'));
   const startedAt = new Date().toISOString();
   const apiKey = process.env.YOUTUBE_API_KEY;
-  const { items, errors } = apiKey
+  const result = apiKey
     ? await buildCatalog(config.programs ?? [], apiKey)
     : await buildCatalogWithYtDlp(config.programs ?? []);
+  const streams = await buildCatalogWithYtDlp([{id:'directos-pmtv',title:'Directos PMTV',playlist_id:'streams',streams_url:'https://www.youtube.com/@PatriciaMaldonadoTV/streams'}]).catch(error => ({items:[],errors:[{program_id:'directos-pmtv',message:String(error)}]}));
+  const byId = new Map(result.items.map(item => [item.id,item]));
+  for (const stream of streams.items) {
+    const previous = byId.get(stream.id);
+    byId.set(stream.id, {...stream, program_id:previous?.program_id ?? (/hablemos/i.test(stream.title) ? 'hablemos-de-todo-un-poco' : /canas/i.test(stream.title) ? 'con-canas-y-sin-ganas' : stream.program_id)});
+  }
+  const rank = item => item.tags.includes('pmtv-live') ? 0 : item.tags.includes('pmtv-upcoming') ? 1 : 2;
+  const items = [...byId.values()].sort((a,b) => rank(a)-rank(b) || (rank(a) === 1 ? Date.parse(a.published_at)-Date.parse(b.published_at) : (Date.parse(b.published_at)||0)-(Date.parse(a.published_at)||0)));
+  items.forEach((item,index) => {item.featured=index===0;});
+  const errors = [...result.errors,...streams.errors];
   await mkdir(OUTPUT_DIR, { recursive: true });
   await writeFile(new URL('catalog.json', OUTPUT_DIR), `${JSON.stringify({ generated_at: new Date().toISOString(), items }, null, 2)}\n`);
   await writeFile(new URL('status.json', OUTPUT_DIR), `${JSON.stringify({ started_at: startedAt, completed_at: new Date().toISOString(), item_count: items.length, errors }, null, 2)}\n`);
