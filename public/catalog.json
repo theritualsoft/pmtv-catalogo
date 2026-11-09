@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T02:49:40.864Z",
+  "generated_at": "2026-11-09T10:36:28.845Z",
   "items": [
     {
       "id": "PMTV-YT-912Pd1f2Obw",
@@ -1300,23 +1300,23 @@
     {
       "id": "PMTV-YT-Jd2D7TFcofs",
       "title": "REACT DE TODO UN POCO! | EN VIVO CON ZAIRA Y ANTONELLA",
-      "description": "¡Bienvenidos al React de De Todo un Poco! 🔥\n\nTodo lo que dejó la jornada te lo contamos sin filtro: las noticias más comentadas, el espectáculo nacional y todas las papitas de la farándula que estabas buscando.\n\nSúmate al panel con Carlos Campos y Javier Pino, junto a Tito DJ en los controles poniendo el ritmo. Todo lo que quieres saber, debatir y comentar, aquí en el canal oficial de Patricia Maldonado.\n\n👉 ¡Deja tu like, suscríbete al canal y activa la campanita para no perderte ninguna transmisión! Participa con nosotros en el chat en vivo.\n\n#DeTodoUnPoco #PatyMaldonado #FarandulaChilena #React #Noticias",
+      "description": "",
       "content_type": "video",
       "source": "youtube",
       "url": "https://youtu.be/Jd2D7TFcofs",
-      "thumbnail_url": "https://i.ytimg.com/vi_webp/Jd2D7TFcofs/maxresdefault.webp",
+      "thumbnail_url": "https://i.ytimg.com/vi/Jd2D7TFcofs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpjgFkbm8aY85J1xGmjCik9yrBbg",
       "published_at": null,
       "year": null,
-      "duration_seconds": null,
+      "duration_seconds": 5565,
       "premium": false,
       "featured": false,
       "requires_auth": false,
       "access_level": "public",
       "program_id": "con-canas-y-sin-ganas",
-      "playlist_id": "streams",
+      "playlist_id": "PLwnLiY7Va0AoYJ4Q9rVAlOdXCLt4aMlOc",
       "presentation": "landscape",
       "tags": [
-        "Directos PMTV",
+        "Con Canas y Sin Ganas",
         "PMTV"
       ],
       "status": "published"
