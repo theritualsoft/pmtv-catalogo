@@ -1,11 +1,6 @@
 {
-  "started_at": "2026-11-22T09:59:52.387Z",
-  "completed_at": "2026-11-22T10:06:01.073Z",
+  "started_at": "2026-11-22T17:39:49.587Z",
+  "completed_at": "2026-11-22T17:40:05.435Z",
   "item_count": 231,
-  "errors": [
-    {
-      "program_id": "directos-pmtv",
-      "message": "Error: No se obtuvo ningun video valido; se conserva el catalogo anterior."
-    }
-  ]
+  "errors": []
 }
